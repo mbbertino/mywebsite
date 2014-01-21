@@ -1,28 +1,114 @@
+@import "compass/css3/transition";
+
 body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
+  margin: 0;
+  padding: 0;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
+body * {
+ font-family: 'Josefin Sans', sans-serif;
+}
+$contentbackground:(rgb(240,240,240));
+
+
+.container {
+  position: relative;
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.header {
+  height: auto;
+  background-color: $contentbackground;
+  .nav {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block;
+    .navbar {position: relative;
+      padding:0;
+      text-align: center;
+      width: 100%;
+      .link {
+        height: 40px;
+        width: 75px;
+        line-height: 40px;
+        font-size: 20px;
+        padding: 0 20px 0 20px;
+        display: inline-block;
+        vertical-align: middle;
+        &.clicknav {
+          color: rgba(239, 78, 12, 0.33);
+          font-size: 30px;
+        }
+      }
+      .logo {
+        height:150px;
+        width: 200px;
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
+  }
 }
 
-.browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.banner {
+  position: relative;
+  height: 150px;  
+  box-shadow: 0px 0px 20px rgba(239, 78, 12, 0.33), inset 0 -5px 100px lightgrey;
+  z-index: 1;
+  .text {
+    line-height: 150px;
+    color: rgb(57,57,57);
+    position: relative;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+    .highlight {
+      &.hovbanner {
+        color: lighten(rgba(239, 78, 12, 0.33),20%);
+        text-decoration: underline;
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+.main {
+  position: relative;
+  height: auto;
+  background-color: $contentbackground;
+  .section1 {
+    height: 650px;
+    padding-top: 15px;
+    border-bottom: 1px dashed gray;
+    .imgset {
+      width: 960px;
+      margin: 0 auto;
+      .imgbox {
+        display: inline-block;
+        height: 200px;
+        width: 300px; 
+        margin: 5px 5px 10px 10px;
+        .smallimg {
+          height: 200px;
+          width: 300px;
+          @include transition(all 2s ease);
+          &.clickimg {
+            height: 625px;
+            width: 960px;
+            // -webkit-transform: rotate(360deg);
+            @include transition(all 1s ease);
+          }
+          &.hidding {
+            height: 0px;
+            width: 0px;
+            @include transition(all .3s ease);
+          }
+        }
+      }
+    }
+  }
 }
