@@ -126,7 +126,7 @@ $contentbackground:(rgb(240,240,240));
   }
 
   .section2 {
-    height: 400px;
+    height: auto;
     padding-top: 15px;
     border-bottom: 5px solid gray;
     .add {
@@ -194,6 +194,9 @@ $contentbackground:(rgb(240,240,240));
     position: relative;
     width: 960px; 
     text-align: center;
+    height: auto;
+    padding-top: 15px;
+    border-bottom: 5px solid gray;
     .name {
       width: 100%;
       position: relative;
@@ -209,16 +212,74 @@ $contentbackground:(rgb(240,240,240));
       height: 40px;
 
     }
+    .boxclick {
+      display: block;
+      margin-bottom: 10px;
+    }
     .newbox {
       height: 50px;
       width: 50px;
       background-color: black;
       display: inline-block;
+      @include transition(all 2s ease);
       &.circle1{
-        
-      border-radius: 50px;
+        border-radius: 50px;
       }
+      &.background2 {
+        background-color: red;
+      }
+      &.move3 {
+        @include transform(translateY(-5000px));
+        @include transition(all 200s ease);
+      }
+      &.move4 {
+        @include transform(translatex(-1000px));
+        @include transition(all 50s ease);
+      }
+      &.move5 {
+        @include transform(translatex(-500px) translatey(-100px));
+        @include transition(all 5s ease);
+      }
+      &.shoot5{
+        @include transform(translatex(50px));
+        @include transition(all 5s ease);  
+      }
+      &.spinning {
+        @include transform(rotate(9810deg));
+        @include transition(all 20s ease);
+      }
+      &.bezier {
+        background-color: red;
+        }
+    }
+    .circles {
+      margin-top: 30px;
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      background-color: gray;
+      display: inline-block;
+      line-height: 100px;
+      &.shadow {
+        box-shadow: inset 1px 1px 50px #fff;
+      }
+      &.textline {
+        text-decoration: line-through;
+      }
+      &.blink {
+        text-shadow: 1px 1px 10px yellow;
+      }
+      &.fullwidth {
+        text-transform: lowercase;
+      }
+      &.boxshadow5 {
+        box-shadow: 10px 1px 10px blue;
+      }
+    }
+    .done {
+      margin-top: 30px;
+      width: 100%;
+      display: block
     }
   }
 }
-

@@ -35,7 +35,7 @@ $('.imgbox').hover(function() {
 
 $('.clickhere').click(function() {
 
-	$('.addbox').first().before('Did I just cut in line???')
+	$('.addbox').first().before('Did I just cut in line???');
 
 })
 
@@ -51,12 +51,112 @@ $('.clickhere2').click(function() {
 $('.clickhere3').click(function() {
 
 	$('.addbox3').add('.addbox3').css( 'color', 'white' );
-	$('.addbox3').first().after(', WAIT NO ITS NOT ?!?!?!')
+	$('.addbox3').first().after(', WAIT NO ITS NOT ?!?!?!');
 })
 
+$('.name').hover(function(){
+	$(this).append("<strong> below</strong>");
+})
+
+$('.hi').blur(function(){
+	$(this).css('background-color','gray');
+})
+
+$('.hi').focus(function(){
+	$(this).css('background-color','red');
+})
 
 $('.newbox.1').hover(function(){
-	$('.newbox').addClass('circle1')
+	$('.newbox.1').addClass('circle1');
 })
 
+$('.newbox.2').hover(function(){
+	$('.newbox.2').addClass('background2');
+})
+
+$('.newbox.3').hover(function(){
+	$('.newbox.3').addClass('move3');
+})
+
+$('.newbox.4').hover(function(){
+	$('.newbox.4').addClass('move4');
+})
+
+$('.newbox.5').hover(function(){
+	$('.section3 .name').css('color','red');
+})
+
+$('.newbox.6').click(function(){
+	$('.section3 .name').css('font-size','0px');
+})
+
+$('.newbox.7').click(function(){
+	$('.section3 .name').css('font-size','20px');
+})
+
+$('.newbox.8').click(function(){
+	$('.section3 .boxclick').css('text-transform','uppercase');
+})
+
+$('.newbox.9').click(function(){
+	$('.section3 .boxclick').hide();
+})
+
+$('.newbox.10').dblclick(function(){
+	$('.newbox.10').addClass('spinning')
+})
+
+$('.circles.1').hover(function(){
+	$(this).addClass('shadow')
+})
+
+$('.circles.2').hover(function(){
+	$(this).addClass('textline')
+})
+
+$('.circles.3').hover(function(){
+	$(this).addClass('blink')
+})
+
+$('.circles.4').hover(function(){
+	$(this).addClass('fullwidth')
+})
+
+$('.circles.5').hover(function(){
+	$(this).addClass('boxshadow5')
+})
+
+$('.done').hover(function(){
+	$('.newbox').addClass('bezier');
+})
+
+$('.done').click(function(){
+	$('.section3').hide();
+})
+
+
+var car = {
+	'name': 'Sally',
+	'miles': 95000, 
+	'color': 'gray', 
+	'wheels': 4,
+	'lights on': false
+}
+
+var person = {
+	'name': 'Johnny',
+	'age': 17, 
+	'hair': 'black', 
+	'arms': 2,
+	'legs': 2,
+	'brains': 1,
+	'mph': 35
+}
+
+var tree = {
+	'name': 'Wall',
+	'age': 100, 
+	'color': 'brown', 
+	'trunks': 1
+}
 
