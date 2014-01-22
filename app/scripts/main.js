@@ -157,6 +157,26 @@ var tree = {
 	'name': 'Wall',
 	'age': 100, 
 	'color': 'brown', 
-	'trunks': 1
+	'trunks': 1,
+	'branches': 5,
+	'stance': 'still here'
 }
 
+
+car.crash = function(){
+	alert('CRAP!!!! I these are bad mason I\'m just playin') 
+}
+
+
+person.speedup = function(){
+	return(this.mph + 50)
+}
+
+tree.bigwind = function (){
+	return(this.branches - 2)
+}
+
+car.ohcrap = function() {
+	person.brains = person.brains - 1;
+	return ("Wow, my car only has" + " "+(car.wheels - 1)+ " wheels and the tree is " + tree.stance +"."+" How many brains do I have now?");
+}
