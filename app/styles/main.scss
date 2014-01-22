@@ -84,7 +84,7 @@ $contentbackground:(rgb(240,240,240));
   .section1 {
     height: 650px;
     padding-top: 15px;
-    border-bottom: 1px dashed gray;
+    border-bottom: 5px solid gray;
     .imgset {
       width: 960px;
       margin: 0 10px;
@@ -102,7 +102,7 @@ $contentbackground:(rgb(240,240,240));
         }
           &.clickimg {
             height: 625px;
-            width: 960px;
+            width: 850px;
             // -webkit-transform: rotate(360deg);
             @include transition(all 1s ease);
           }
@@ -121,6 +121,92 @@ $contentbackground:(rgb(240,240,240));
           background: rgba(0,0,0,0.75);
           }
       }
+    }
+  }
+
+  .section2 {
+    height: 400px;
+    padding-top: 15px;
+    border-bottom: 5px solid gray;
+    .add {
+      display: inline-block;
+      height: 400px;
+      width: 250px;
+      margin: 0px 33px 0px;
+      .clickhere {
+        height: 40px;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid black;
+      }
+      .addbox {
+        height: 300px;
+        width: 100%;
+        background-color: rgba(239, 78, 12, 0.33);  
+      
+      }
+    }
+    .add2 {
+      display: inline-block;
+      height: 400px;
+      width: 250px;
+      margin: 0px 33px 0px;
+      .clickhere2 {
+        height: 40px;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid black;
+      }
+      .addbox2 {
+        height: 300px;
+        width: 100%;
+        background-color: rgba(239, 78, 12, 0.33);  
+        .text {
+          height:100px;
+        }
+      }
+    }
+    .add3 {
+      display: inline-block;
+      height: 400px;
+      width: 250px;
+      margin: 0px 33px 0px;
+      .clickhere3 {
+        height: 40px;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid black;
+      }
+      .addbox3 {
+        height: 300px;
+        width: 100%;
+        background-color: rgba(239, 78, 12, 0.33);  
+      
+      }
+    }
+  }
+  .section3 {
+    margin-top: 25px;
+    position: relative;
+    width: 960px; 
+    text-align: center;
+    .name {
+      width: 100%;
+      position: relative;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 40px;
+    }
+    .hi {
+      margin: 25px auto;
+      display: block;
+      position: relative;
+      width: 400px;
+      height: 40px;
+
     }
   }
 }
