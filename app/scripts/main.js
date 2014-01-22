@@ -15,14 +15,23 @@ $('.highlight').hover(function(){
 });
 
 // 
-$('.smallimg').click(function(){
-	
+$('.imgbox').click(function(){
 	console.log('linkcliked!!!');
 
-	$('.smallimg').not(this).addClass('hidding');
-
+	$('.imgbox').not(this).addClass('hidding');
 	$(this).addClass('clickimg');
 
 });
 
+
+
+$( ".imgbox" ).hover(function() {
+  $( ".caption" ).animate({
+    opacity: 0.25,
+    height: "toggle",
+    bottom: "-=50",
+  }, 1000, function() {
+    // Animation complete.
+  });
+});
 

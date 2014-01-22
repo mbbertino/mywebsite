@@ -1,4 +1,5 @@
 @import "compass/css3/transition";
+@import "compass/css3/transform";
 
 body {
   margin: 0;
@@ -86,16 +87,19 @@ $contentbackground:(rgb(240,240,240));
     border-bottom: 1px dashed gray;
     .imgset {
       width: 960px;
-      margin: 0 auto;
+      margin: 0 10px;
       .imgbox {
+        position: relative;
+        overflow: hidden;
         display: inline-block;
-        height: 200px;
-        width: 300px; 
-        margin: 5px 5px 10px 10px;
+        height: 300px;
+        width: 400px; 
+        margin: 10px 35px;
         .smallimg {
-          height: 200px;
-          width: 300px;
+          height: 100%;
+          width:100%;
           @include transition(all 2s ease);
+        }
           &.clickimg {
             height: 625px;
             width: 960px;
@@ -107,8 +111,17 @@ $contentbackground:(rgb(240,240,240));
             width: 0px;
             @include transition(all .3s ease);
           }
-        }
+        .caption {
+          position: absolute;
+          bottom: 0;
+          height: 50px;
+          width: 100%;
+          color: #fff;
+          padding: 5px 10px;
+          background: rgba(0,0,0,0.75);
+          }
       }
     }
   }
 }
+
