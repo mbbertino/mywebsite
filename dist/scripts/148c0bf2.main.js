@@ -1,1 +1,0 @@
-$(".link").click(function(){console.log("linkcliked!!!"),$(this).addClass("clicknav")}),$(".highlight").hover(function(){console.log("worked"),$(this).addClass("hovbanner")}),$(".smallimg").click(function(){console.log("linkcliked!!!"),$(".smallimg").not(this).addClass("hidding"),$(this).addClass("clickimg")});
