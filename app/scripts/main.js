@@ -53,3 +53,10 @@ $('.clickhere3').click(function() {
 	$('.addbox3').add('.addbox3').css( 'color', 'white' );
 	$('.addbox3').first().after(', WAIT NO ITS NOT ?!?!?!')
 })
+
+
+$('.newbox.1').hover(function(){
+	$('.newbox').addClass('circle1')
+})
+
+

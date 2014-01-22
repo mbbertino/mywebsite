@@ -209,6 +209,16 @@ $contentbackground:(rgb(240,240,240));
       height: 40px;
 
     }
+    .newbox {
+      height: 50px;
+      width: 50px;
+      background-color: black;
+      display: inline-block;
+      &.circle1{
+        
+      border-radius: 50px;
+      }
+    }
   }
 }
 
